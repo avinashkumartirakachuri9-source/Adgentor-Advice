@@ -5,20 +5,61 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: hsl(218, 23%, 16%);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 20px;
 }
 
 .container{
-    height: 45%;
-    width: 35%;
+    width: 540px;
+    max-width: 100%;
+    min-height: 330px;
     background-color: hsl(217, 19%, 24%);
-    border-radius: 2rem;
+    border-radius: 20px;
     position: relative;
+    padding: 20px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-family: "Manrope", sans-serif;
+    color: hsl(150, 100%, 66%);
+}
+
+.text{
+    width: 85%;
+    margin: 40px auto 0;
+
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.image{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.image img{
+    max-width: 100%;
+    height: auto;
 }
 
 .dice{
@@ -41,31 +82,58 @@ body{
 .dice img{
     width: 24px;
 }
-.container2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
 
-    letter-spacing: 3px;
-    font-size: 14px;
-    font-family: "Manrope", sans-serif;
-    color: hsl(150, 100%, 66%);
+/* Tablet */
+@media (max-width: 768px){
+
+    .container{
+        width: 90%;
+        min-height: 350px;
+    }
+
+    .text{
+        font-size: 24px;
+    }
+
+    .image img{
+        content: url("./images/pattern-divider-mobile.svg");
+    }
 }
 
-.text{
-    width: 80%;
-    margin: 50px auto 0;
+/* Mobile */
+@media (max-width: 480px){
 
-    text-align: center;
-    color: white;
-    font-size: 28px;
-    font-family: "Manrope", sans-serif;
-    font-weight: 800;
-}
-.image{
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
+    .container{
+        width: 100%;
+        min-height: 320px;
+    }
+
+    .container2{
+        font-size: 12px;
+    }
+
+    .text{
+        width: 90%;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .image{
+        bottom: 70px;
+    }
+
+    .image img{
+        content: url("./images/pattern-divider-mobile.svg");
+        width: 100%;
+    }
+
+    .dice{
+        width: 50px;
+        height: 50px;
+        bottom: -25px;
+    }
+
+    .dice img{
+        width: 20px;
+    }
 }
